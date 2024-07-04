@@ -1,38 +1,38 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 
-// export const fetchProject =  createAsyncThunk("dataSlice/fetchProject",async()=>{
-//     const response = await axios.get("https://taskmanagment2.onrender.com/Projects");
-//     return response.data;
-// })
-// export const addProject = createAsyncThunk("dataSlice/addProject", async (newProject) => {
-//     const response = await axios.post("https://taskmanagment2.onrender.com/Projects", newProject);
-//     return response.data;
-// });
-// export const deleteProject = createAsyncThunk("dataSlice/deleteProject", async (projectId) => {
-//     await axios.delete(`https://taskmanagment2.onrender.com/Projects/${projectId}`);
-//     return projectId;
-// });
-// export const updateProject = createAsyncThunk("dataSlice/updateProject", async (updatedProject) => {
-//     await axios.put(`https://taskmanagment2.onrender.com/Projects/${updatedProject.id}`,updatedProject);
-//     return updatedProject;
-// });
 export const fetchProject = createAsyncThunk("dataSlice/fetchProject", async () => {
-    const response = await axios.get("http://localhost:3000/Projects");
+    const response = await axios.get("https://taskmanagment2.onrender.com/Projects");
     return response.data;
 })
 export const addProject = createAsyncThunk("dataSlice/addProject", async (newProject) => {
-    const response = await axios.post("http://localhost:3000/Projects", newProject);
+    const response = await axios.post("https://taskmanagment2.onrender.com/Projects", newProject);
     return response.data;
 });
 export const deleteProject = createAsyncThunk("dataSlice/deleteProject", async (projectId) => {
-    await axios.delete(`http://localhost:3000/Projects/${projectId}`);
+    await axios.delete(`https://taskmanagment2.onrender.com/Projects/${projectId}`);
     return projectId;
 });
 export const updateProject = createAsyncThunk("dataSlice/updateProject", async (updatedProject) => {
-    await axios.put(`http://localhost:3000/Projects/${updatedProject.id}`, updatedProject);
+    await axios.put(`https://taskmanagment2.onrender.com/Projects/${updatedProject.id}`, updatedProject);
     return updatedProject;
 });
+// export const fetchProject = createAsyncThunk("dataSlice/fetchProject", async () => {
+//     const response = await axios.get("http://localhost:3000/Projects");
+//     return response.data;
+// })
+// export const addProject = createAsyncThunk("dataSlice/addProject", async (newProject) => {
+//     const response = await axios.post("http://localhost:3000/Projects", newProject);
+//     return response.data;
+// });
+// export const deleteProject = createAsyncThunk("dataSlice/deleteProject", async (projectId) => {
+//     await axios.delete(`http://localhost:3000/Projects/${projectId}`);
+//     return projectId;
+// });
+// export const updateProject = createAsyncThunk("dataSlice/updateProject", async (updatedProject) => {
+//     await axios.put(`http://localhost:3000/Projects/${updatedProject.id}`, updatedProject);
+//     return updatedProject;
+// });
 
 
 const peojectSlice = createSlice({
